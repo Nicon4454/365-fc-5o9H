@@ -1,0 +1,70 @@
+#####################
+#####################
+## Ip Allocation   ##
+## for the House   ##
+## 12/09/2018 v0.5 ##
+#####################
+#####################
+
+
+< 10.0.0.0/8 >
+	Gateway=10.0.0.1
+	mask=255.0.0.0
+</>
+
+{Servers()
+	[unraid]
+		<USS-BCA>
+			(01gb)=10.0.0.10
+			(10gb)=10.10.0.11
+		</>
+		
+		<USS-Titan>
+			(01gb)=10.0.0.12
+			(10gb)=10.10.0.13
+		</>
+	[/]
+	
+	<USS-Valiant>
+		(01gb)=10.0.0.14
+	</>
+
+	<Printer>
+		(01gb)=10.0.0.16
+	</>
+}
+
+
+
+{Nest()  #will work on this later
+
+}
+
+{Work_Stations(10.0.5.*)
+	<USS-Intrepid> 
+		(01gb)=10.0.5.1
+	</>
+	<USS-Allison> 
+		(01gb)=10.0.5.10
+	</>
+	<USS-Kirk> 
+		(01gb)=10.0.5.20
+	</>
+}
+
+{OpenVPN()
+	<tunnel_ip>
+		10.0.56.*
+
+}
+
+{IOS()
+	<Dans_Ipad_pro>
+		10.30.0.1
+	</>
+	<Dans_Iphone>
+		10.30.0.2
+	</>
+}
+
+#OpenMesh (can not change to static)

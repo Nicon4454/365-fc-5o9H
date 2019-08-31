@@ -2,7 +2,10 @@
 #####################
 ## Ip Allocation   ##
 ## for the House   ##
-## 12/09/2018 v0.5 ##
+## created on      ##
+## 12/09/2018      ##
+## Last updated on ##
+## 08/31/2019      ##
 #####################
 #####################
 
@@ -60,19 +63,22 @@
 		</>
 }
 
-{OpenVPN()
-	<tunnel_ip>
-		10.0.56.*
-
+{
+	# OpenVPN
+		[tunnel_ip]
+			10.0.56.*
+		[/]
 }
 
-{IOS()
-	<Dans_Ipad_pro>
+{
+	# IOS
+	[Dans_Ipad_pro]
 		10.30.0.1
-	</>
-	<Dans_Iphone>
+	[/]
+
+	[Dans_Iphone]
 		10.30.0.2
-	</>
+	[/]
 }
 
 #OpenMesh (can not change to static)

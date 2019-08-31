@@ -1,0 +1,84 @@
+#####################
+#####################
+## Ip Allocation   ##
+## for the House   ##
+## created on      ##
+## 12/09/2018      ##
+## Last updated on ##
+## 08/31/2019      ##
+#####################
+#####################
+
+
+< 10.0.0.0/8 >
+	Gateway=10.0.0.1
+	mask=255.0.0.0
+</>
+
+{
+	# Servers
+		# Unraid
+			[USS-BCA]
+				<10.0.0.10> # 1 Gb
+				<10.10.0.11> # 10 Gb (not presant yet)
+			[/]
+		
+			[USS-Titan]
+				<10.0.0.12> # 1 Gb
+				<10.10.0.13> # 10 Gb (not presant yet)
+			[/]
+	
+		# ubuntu
+		    [USS-Valiant]
+				<10.0.0.14> # 1 Gb
+			[/]
+
+			[MC-Server]
+				<10.0.0.18> # 1 Gb
+			[/]
+
+	# Printers
+		[HP_Color_LaserJet]
+			<10.0.0.16>
+		[/]
+
+
+}
+
+{
+
+	# Work_Stations (10.0.5.*)
+		[USS-Intrepid]
+			<10.0.5.1>
+		[/]
+		<USS-Allison> 
+			(01gb)=10.0.5.10
+		</>
+		<USS-Kirk> 
+			(01gb)=10.0.5.20
+		</>
+		<Makkah>
+			(01gb)=10.0.5.30
+			(01gb_w)10.0.5.31
+		</>
+}
+
+{
+	# OpenVPN
+		[tunnel_ip]
+			10.0.56.*
+		[/]
+}
+
+{
+	# IOS
+	[Dans_Ipad_pro]
+		10.30.0.1
+	[/]
+
+	[Dans_Iphone]
+		10.30.0.2
+	[/]
+}
+
+#OpenMesh (can not change to static)
